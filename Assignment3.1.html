@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3.1</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//1
+		let myArray = [2, 1, 3];
+
+		let getArrLength = (...args) => {
+			console.log(args.length);
+			return args.length;
+		}
+
+		let multiplyByTwo = (...args) => {
+			return args.map( (key) => {
+				return key * 2;
+			})
+		}
+
+		let sortRestArgs = (...args) => {
+			return args.sort();
+		}
+
+		getArrLength(...myArray);
+		multiplyByTwo(...myArray);
+		sortRestArgs(...myArray);
+
+	//2
+
+	let apiDetail = {
+		baseUrl: 'http://baseurl',
+		apiUrl: '/user',
+		Method: (Data) => {
+			console.log(Data)
+		},
+		type: 'POST',
+		dataType: 'JSONP'
+
+	}
+
+	let getAjaxData = (obj) => {
+
+		let { baseUrl, apiUrl, Method, type, dataType} = obj;
+
+		let xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		     	Method(this.response);
+		    }
+		  };
+		  xhttp.open(type, apiUrl, true);
+		  xhttp.send();
+	}
+
+	getAjaxData(apiDetail);
+
+	</script>
+</body>
+</html>
