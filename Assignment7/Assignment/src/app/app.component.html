@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+<div class="container">
+  <ul>
+    <li *ngFor="let user of userList; let i = index">
+        <div *ngIf="user.age >=27" [ngStyle]="{'color': (i == 2) ? 'red': ''}">
+              {{user.name}} | {{user.age}} | {{user.profession}}
+        </div>
+    </li>
+  </ul> 
+
+</div>
+
+<div class="mydiv">
+  <span>{{user.fname}}</span>
+  <span>{{user.lname}}</span>
+  <span  [style.background]="'lightblue'">{{user.role}}</span>
+  <span>{{user.age}}</span>
+  <span>{{user.email}}</span>
+</div>
+
+<app-employee></app-employee>
+
+<app-role-list></app-role-list>
+
+<app-role-display></app-role-display>

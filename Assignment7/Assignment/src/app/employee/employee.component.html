@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+
+Click the list:
+<div *ngFor="let employee of employeeList" (click)="showItem(employee)">
+	<span>{{employee.name}}</span>
+	<span>{{employee.companyName}}</span>
+	<span>{{employee.designation}}</span>
+	<span>{{employee.gender}}</span>
+	<span>{{employee.age}}</span>
+</div>
+
+<app-employee-list [data]="selectedData"></app-employee-list>

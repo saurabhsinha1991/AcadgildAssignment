@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<div>
+	<li><a href='#' (click)='displayNames("Admin", $event)'>Admin</a></li>
+    <li><a href='#' (click)='displayNames("Super Admin", $event)'>Super Admin</a></li>
+    <li><a href='#' (click)='displayNames("Supervisor", $event)'>Supervisor</a></li>
+    <li><a href='#' (click)='displayNames("User", $event)'>User</a></li>
+</div>
+
+<app-role-display-list [data]="selectedRolesList"></app-role-display-list>

@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+Enter your role in the organisation: <input type="text" #role name="role" />
+<button type="button" (click)="addList(role)">Add</button>
+
+<ul>
+	<li *ngFor="let role of roles">
+		{{role}}
+	</li>
+</ul>
