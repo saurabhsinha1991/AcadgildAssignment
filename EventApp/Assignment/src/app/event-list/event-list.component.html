@@ -1,0 +1,14 @@
+<h2>{{title}}</h2>
+
+
+<div class="event" *ngFor="let event of Events; let i = index;">
+	Title: {{event.Title}} <br>
+	Author: {{event.Author}} <br>
+	Duration: {{event.Duration}} <br>
+	Details: {{event.Details}} <br>
+	<br>
+	Vote up:   <button type="button" (click)="voteUp(i, event)">+</button> <br>
+	Vote Count: {{event.Votes}} <br>
+	Vote down: <button type="button" (click)="voteDown(i, event)">-</button>
+	
+</div>

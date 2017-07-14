@@ -1,0 +1,23 @@
+[
+  {
+    "Title": "HTML5",
+    "Author": "Jan Doe",
+    "Duration": "2 hours",
+    "Details": "HTML5 thorough knowledge",
+    "Votes": 10
+  },
+  {
+    "Title": "CSS3",
+    "Author": "Mike",
+    "Duration": "2 hours",
+    "Details": "CSS3 thorough knowledge",
+    "Votes": 20
+  },
+  {
+    "Title": "JS",
+    "Author": "John",
+    "Duration": "2 hours",
+    "Details": "JS thorough knowledge",
+    "Votes": 30
+  }
+]

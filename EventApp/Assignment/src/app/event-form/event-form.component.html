@@ -1,0 +1,48 @@
+<div class="form-wrapper">
+	<h2>Registration Form</h2>
+	<div class="col-xs-4">
+		<form class="row" #registration="ngForm" (ngSubmit)="onSubmit(registration.value)">
+			<div class="form-group">
+				<label>Title</label>
+				<input type="text" name="Title" required [(ngModel)]="user.title" class="form-control">
+				<!-- <p class="error" *ngIf="user.name.valid">Wassup</p> -->
+			</div>
+			<div class="form-group">
+				<label>Author</label>
+				<input type="text" name="Author" required [(ngModel)]="user.author" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Date</label>
+				<input type="date" name="Date" required [(ngModel)]="user.date" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Time</label>
+				<input type="time" name="Time" required [(ngModel)]="user.time" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Details</label>
+				<textarea class="form-control" required [(ngModel)]="user.details" name="Details"></textarea>
+			</div>
+			<div class="form-group">
+				<label>Duration</label>
+				<input type="number" class="form-control" required [(ngModel)]="user.duration" name="Duration">
+			</div>
+			<div class="form-group">
+				<label>Address</label>
+				<textarea class="form-control" required [(ngModel)]="user.address" name="address"></textarea>
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<input type="text" class="form-control" required [(ngModel)]="user.city" name="city">
+			</div>
+			<div class="form-group">
+				<label>PIN</label>
+				<input type="number" class="form-control" required [(ngModel)]="user.pin" name="pin">
+			</div>
+
+			<div class="text-right">
+				<button type="submit" [disabled]="registration.form.invalid" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>

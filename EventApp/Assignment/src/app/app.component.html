@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <div class="container">
+        <h1>Welcome to HTML5 World</h1>
+
+        <nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+				<li (click)="isClicked=1" [class.active]="isClicked == 1">
+	        		<a routerLink="eventlist">Event List</a>
+	        	</li>
+	        	<li (click)="isClicked=0" [class.active]="isClicked == 0">
+			        <a routerLink="register">Create New Event</a>
+				</li>
+		    </ul>
+		  </div>
+		</nav>
+        
+        <router-outlet></router-outlet>
+        <!-- <app-event-list></app-event-list> -->
+    </div>
+</div>
