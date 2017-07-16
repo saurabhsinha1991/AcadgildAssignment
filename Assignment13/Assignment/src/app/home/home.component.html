@@ -1,0 +1,10 @@
+<div class="wrapper">
+	<div *ngFor="let item of Items">
+		<a routerLink="/home/{{item.Title}}">
+			<span>{{item.Title}}</span> | 
+			<span>{{item.Author}}</span> |
+			<span>{{item.Duration}}</span> |
+			<span>{{item.Details}}</span>
+		</a>
+	</div>
+</div>

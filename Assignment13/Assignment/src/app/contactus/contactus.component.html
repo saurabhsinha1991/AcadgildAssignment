@@ -1,0 +1,8 @@
+<p>
+  contactus works!
+</p>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+	<label>Name</label>
+	<input type="text" name="name" required [(ngModel)]="name">
+	<button type="submit" [disabled]="!userForm.form.valid">Save</button>
+</form>
