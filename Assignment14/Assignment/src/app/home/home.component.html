@@ -1,0 +1,26 @@
+<p>
+  home works!
+</p>
+
+{{myData | json}}
+
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Duration</th>
+			<th>Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let data of dynamicData">
+			<td>{{data.Title}}</td>
+			<td>{{data.Author}}</td>
+			<td>{{data.Duration}}</td>
+			<td>{{data.Details}}</td>
+		</tr>
+	</tbody>
+</table>
